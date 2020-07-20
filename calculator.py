@@ -12,15 +12,7 @@ var_dict = dict() # type: Dict[str,int]
 
 def smart_calculator():
     while True:
-        # For testing only
-        # var_dict['a'] = 5
-        # var_dict['b'] = 6
-        # var_dict['c'] = 7
-        # var_dict['d'] = 8
-
         expression = input()
-
-
         if expression.startswith('/'):  # identify if a command was issued
             command(expression)
 
@@ -106,9 +98,6 @@ def solve_expr(expression):
     # finish up - pop all operators from the stack and append to the postfix
     while stack:
         postfix.append(stack.pop())
-
-    #print(postfix)  # for debug only!
-    #return 0    # for debug only!
 
     operators = {
         '+' : add,
